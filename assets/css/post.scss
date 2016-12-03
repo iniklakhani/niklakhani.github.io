@@ -20,8 +20,14 @@
 	margin: 0;
 	color: #333;
 	font-size: 1rem;
-	@include media(mobile) {
-		font-size: 90%;
+	@include media(tablet) {
+		font-size: 80%;
+	}
+	@include media(content) {
+		padding: 0 10px;
+	}
+	@include media(x-small) {
+		font-size: 70%;
 	}
 
 	a {

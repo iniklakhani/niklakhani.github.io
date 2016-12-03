@@ -70,6 +70,7 @@
     $small: "(max-width: 600px)";
     $large: "(max-width: 1024px)";
     $x-large: "(max-width: 1600px)";
+    $content: "(max-width: 768px)";
     @if $point==desktop {
         @media #{$x-large} {
             @content;
@@ -87,6 +88,10 @@
     }
     @else if $point==x-small {
         @media #{$x-small} {
+            @content;
+        }
+    }@else if $point==content {
+        @media #{$content} {
             @content;
         }
     }

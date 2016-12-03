@@ -18,7 +18,8 @@
     color: #fff
 }
 
-html {
+html,
+body {
     @include font-stack-open;
     font-weight: 500;
     font-size: 18px;
@@ -69,22 +70,31 @@ h6 {
     font-weight: 400;
     font-style: normal;
     line-height: 1.1;
-    color: #333
+    color: #333;
 }
 
 h1 {
     font-size: 2.3rem;
-    margin: 0 0 1.3rem
+    margin: 0 0 1.3rem;
+    @include media(tablet) {
+        font-size: 1.9rem;
+    }
 }
 
 h2 {
     font-size: 2rem;
-    margin: 0 0 1.2rem
+    margin: 0 0 1.2rem;
+    @include media(tablet) {
+        font-size: 1.7rem;
+    }
 }
 
 h3 {
     font-size: 1.8rem;
-    margin-bottom: 1.1rem
+    margin-bottom: 1.1rem;
+    @include media(tablet) {
+        font-size: 1.5rem;
+    }
 }
 
 h4 {
