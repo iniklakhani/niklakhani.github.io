@@ -1,11 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 @mixin font-stack-open {
 	font-family: 'Open Sans', sans-serif;
-}
-
-@mixin font-stack-lato {
-	font-family: 'Lato', sans-serif;
 }
 
 @mixin font-stack-lucida {
