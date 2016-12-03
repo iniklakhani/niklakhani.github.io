@@ -1,0 +1,43 @@
+---
+permalink: /404/
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Whoops, page not found!</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Custom Favicons -->
+    {% include favicon.html %}
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/404.css">
+    <!-- Custom Scripts -->
+</head>
+<body>
+
+	<!-- Header -->
+	<section class="header">
+	    <div class="overlay"></div>
+	    <div class="logo">
+	        <a href="{{ site.url }}">
+	            <div class="logo-inner">
+	                <span>n</span>
+	            </div>
+	        </a>
+	    </div>
+
+	    <div class="whoops-content">
+	    	<h1 class="whoops">Whoops, page not found!</h1>
+	    	<p>
+	    		The page that you're looking for is not found, go back to <a href="{{ site.url }}">home</a> or <a href="{{ site.url }}/blog/">blog</a>.
+	    	</p>
+	    </div>
+	</section>
+	<!-- /Header -->
+	
+</body>
+</html>

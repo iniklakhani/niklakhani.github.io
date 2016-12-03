@@ -1,0 +1,59 @@
+#social {
+
+}
+
+.social {
+	list-style: none;
+	padding: 0;
+	margin: 70px 0 0;
+	text-align: center;
+	@include media(mobile) {
+		margin-top: 40px;
+	}
+	li {
+		display: inline-block;
+		+ li {
+			margin-left: 20px;
+			@include media(mobile) {
+				margin-left: 5px;
+			}
+		}
+		a {
+			display: block;
+			height: 60px;
+			width: 60px;
+			background: $yellow;
+			color: $white;
+			text-align: center;
+			position: relative;
+			@include media(mobile) {
+				width: 35px;
+				height: 35px;
+			}
+			i {
+				line-height: 60px;
+				font-size: 40px;
+				@include media(mobile) {
+					font-size: 20px;
+					line-height: 35px;
+				}
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				background: transparent;
+				border: 2px solid $yellow;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				@include transition(all .3s ease-out);
+			}
+			&:hover:after {
+				opacity: 1;
+				@include transform(scale(1.3));
+			}
+		}
+	}
+}

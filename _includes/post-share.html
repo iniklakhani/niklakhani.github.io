@@ -1,0 +1,15 @@
+<!-- Social -->
+<section class="module module-share" id="social">
+    <h2 class="module-title">
+        Quick Share{% if page.comments %}  and Leave a Comment{% endif %}
+    </h2>
+    <ul class="social">
+        <li><a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="http://pinterest.com/pin/create/button/?url={{ page.url }}&description={{ page.description }}" rel="nofollow" target="_blank" title="Share on Pinterest"><i class="fa fa-pinterest"></i></a></li>
+        <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source={{ site.url }}" rel="nofollow" target="_blank" title="Share on LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="http://www.reddit.com/submit?url={{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Share on Reddit"><i class="fa fa-reddit"></i></a></li>
+    </ul>
+</section>
+<!-- /Social -->

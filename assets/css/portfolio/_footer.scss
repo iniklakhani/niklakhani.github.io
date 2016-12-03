@@ -1,0 +1,46 @@
+#footer {
+	background: url(../images/road.jpg);
+	width: 100%;
+	padding: 50px;
+	text-align: center;
+	position: relative;
+	z-index: 100;
+
+	.overlay {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(51, 51, 51, .4);
+	}
+
+	.brand-info {
+		position: relative;
+		z-index: 1;
+		padding: 0;
+		margin: 0;
+		@include font-stack-lucida;
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		color: $white;
+		i {
+			color: $yellow;
+		}
+		span {
+			display: block;
+			margin-top: 3px;
+		}
+		a:hover,
+		a:active,
+		a:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+#footer .logo {
+	top: 0;
+	margin-top: -30px;
+}

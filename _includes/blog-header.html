@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+
+
+    <!-- SEO -->
+    {% include seo.html %}
+    <!-- /SEO -->
+    
+    <meta rel="author" href="{{ site.google-author }}">
+    <meta rel="publisher" href="{{ site.google-publisher }}">
+    
+    <!-- Custom Favicons -->
+    {% include favicon.html %}
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/blog.css">
+    {% if page.is_archive %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/archive.css">
+    {% endif %}
+    {% if page.is_page %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/page.css">
+    {% endif %}
+    {% if page.is_post %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/post.css">
+    {% endif %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
+    <!-- Custom Scripts -->
+    <script src="{{ site.baseurl }}/assets/js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="page-wrap">
+        <!-- Site Content -->
+        <!-- Header -->
+        <header class="header" id="home">
+            <div class="overlay"></div>
+            <div class="header-nav column fixed nopadding">
+                <div class="logo">
+                    <a href="{{ site.url }}/blog/">
+                        <div class="logo-inner">
+                            <span>n</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-1-6 nav-left">
+                    <nav class="nav-links nav-links-left">
+                        <a href="{{ site.url }}/#about">About Nikul Lakhani</a>
+                    </nav>
+                </div>
+                <div class="col-1-6 nav-right">
+                    <nav class="nav-links nav-links-right">
+                        <a href="{{ site.url }}/#contact">Let's Work Together</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="blog-header">
+                <h1 class="responsive-text" data-max-size="60px">
+                    <!--googleoff: index-->>_ <!--googleon: index-->{% if page.is_post %}{{ page.title }}{% else %}Nikul Lakhani's Blog{% endif %}
+                </h1>
+                <span>{% if page.is_post %}Posted On: {{ page.date | date: "%b %d, %Y" }}{% else if page.is_page %}{{ page.title }}{% else %}Web Design 'N Development{% endif %}</span>
+            </div>
+        </header>
+        <!-- /Header -->

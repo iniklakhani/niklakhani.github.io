@@ -1,0 +1,12 @@
+#comments {
+	max-width: 768px;
+	margin: 0 auto 100px;
+	&.disabled p {
+		text-align: center;
+		color: #333;
+		a {
+			color: #333;
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,0 +1,161 @@
+---
+title: Nikul Lakhani's Official Website - Creative Design | Innovative Ideas
+layout: landing
+---
+
+<!-- Loader -->
+<div class="loading site-loader">
+    <div class="overlay"></div>
+    <div class="logo">
+        <a href="{{ site.url }}">
+            <div class="logo-inner">
+                <span class="animate">n</span>
+            </div>
+        </a>
+    </div>
+</div>
+<!-- /Loader -->
+
+<!-- Navigator -->
+<nav id="nav">
+    <ul>
+        <li><a href="#home" class="active"><i class="fa fa-home"></i><span>Home</span></a></li>
+        <li><a href="#about"><i class="fa fa-user-secret"></i><span>About</span></a></li>
+        <li><a href="#blog"><i class="fa fa-bold"></i><span>Blog</span></a></li>
+        <li><a href="#social"><i class="fa fa-share-alt"></i><span>Social</span></a></li>
+        <li><a href="#contact"><i class="fa fa-send"></i><span>Contact</span></a></li>
+    </ul>
+</nav>
+<!-- /Navigator -->
+<!-- Header -->
+<header class="header" id="home">
+    <div class="overlay"></div>
+    <div class="header-nav column fixed nopadding">
+        <div class="logo">
+            <a href="{{ site.url }}">
+                <div class="logo-inner">
+                    <span>n</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-1-6 nav-left">
+            <nav class="nav-links nav-links-left">
+                <a href="#about">About Nikul Lakhani</a>
+            </nav>
+        </div>
+        <div class="col-1-6 nav-right">
+            <nav class="nav-links nav-links-right">
+                <a href="#contact">Let's Work Together</a>
+            </nav>
+        </div>
+    </div>
+    <div class="header-brand">
+        <div class="heading-big">
+            <h2 class="flex-text">Web Designer</h2>
+            <h1 class="responsive-text">Nikul Lakhani</h1>
+            <span>Thinker // Designer // Developer</span>
+        </div>
+    </div>
+</header>
+<!-- /Header -->
+<!-- About -->
+<section class="module" id="about">
+    <h2 class="module-title">
+			About Me
+		</h2>
+    <figure class="avatar">
+        <img src="{{ site.baseurl }}/assets/images/avatar.jpg" alt="Avatar">
+    </figure>
+    <p class="about-me">
+        My self <strong>Nikul Lakhani</strong>, i like to hit the boundaries. I love creating creative and clean design for the web. I would design the "Design" in a simple sense as my passion. It is something that I enjoy being involved with in many different aspects. It keeps me driven and something that i see myself being involved in for a long time. It's something I do before going to bed, and something I can't wait to do in the morning.
+    </p>
+    <div class="skills clearfix">
+        {% for skill in site.skills %}
+        <div class="skill-group">
+            <div class="skill-label">{{ skill.name }}</div>
+            <div class="skill-bar" data-fill="{{ skill.fill }}">
+                {% for i in (1..10) %}
+                <span></span> {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<!-- /About -->
+<!-- Portfolio -->
+<section class="module" id="blog">
+    <h2 class="module-title">
+			Blog Posts
+		</h2>
+    <div class="folio">
+        {% for post in site.posts limit:6 %}
+        <div class="folio-group">
+            <a href="{{ post.url }}">
+                <figure>
+                    <div class="img-wrap">
+                        <img src="blog/uploads/{{ post.date | date: "%Y"}}/{{ post.date | date: "%m" }}/thumb-{{ post.featured }}" alt="Loading error!">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <figcaption><span>{{ post.title }}</span></figcaption>
+                </figure>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="button-blog-posts">
+        <a href="{{ site.url }}/blog/">Browse More..</a>
+    </div>
+</section>
+<!-- /Portfolio -->
+{% include social.html %}
+<!-- Contact -->
+<section class="module" id="contact">
+    <h2 class="module-title">
+			Contact Me
+		</h2>
+    <div class="form-wrap">
+        <form id="contact-form">
+            <div class="form-group">
+                <div class="submit-alert"></div>
+            </div>
+            <div class="form-group">
+                <label>
+                    Your Name:
+                    <input type="text" class="form-name" name="name">
+                </label>
+            </div>
+            <div class="form-group">
+                <label>
+                    Your Email:
+                    <input type="email" class="form-email" name="_replyto">
+                </label>
+            </div>
+            <div class="form-group">
+                <label>
+                    Your Message:
+                    <textarea name="message" class="form-message"></textarea>
+                </label>
+            </div>
+            <div class="form-group submit-wrap">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- /Contact -->
+<!-- Footer -->
+<footer class="module" id="footer">
+    <div class="overlay"></div>
+    <div class="logo">
+        <a href="{{ site.url }}">
+            <div class="logo-inner">
+                <span>n</span>
+            </div>
+        </a>
+    </div>
+    <p class="brand-info">
+        Built with <a href="//jekyllrb.com">Jekyll</a> | Hosted on <a href="//github.com">GitHub</a> | Designed with <i class="fa fa-heart"></i> By <a href="{{ site.url }}">Nikul</a>
+        <span>&copy; {{ site.time | date: '%Y' }} niklakhani.in | <a href="{{ site.url }}/blog/terms-of-use/">Terms Of Use</a> | <a href="{{ site.url }}/feed.xml">RSS</a></span>
+    </p>
+</footer>
+<!-- /Footer -->

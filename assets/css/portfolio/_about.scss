@@ -1,0 +1,79 @@
+.about-me {
+    font-size: 24px;
+    @include media(tablet) {
+        font-size: 20px;
+    }
+    @include media(mobile) {
+        font-size: 18px;
+    }
+    @include media(x-small) {
+        font-size: 16px;
+    }
+    font-weight: 300;
+    line-height: 1.6;
+    color: $text;
+    max-width: 768px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    strong {
+        color: #555;
+    }
+}
+
+.avatar {
+    display: block;
+    padding: 0;
+    height: 160px;
+    width: 160px;
+    margin: 0 auto 30px;
+    img {
+        border-radius: 50%;
+        max-width: 100%;
+        border: 4px solid #eee;
+    }
+}
+
+.skills {
+    max-width: 500px;
+    margin: 60px auto 0;
+    @include media(x-small) {
+        max-width: 200px;
+    }
+    .skill-group {
+        width: 50%;
+        @include media(x-small) {
+            width: 100%;
+        }
+        float: left;
+        &:nth-child(even) {
+            text-align: right;
+            @include media(x-small) {
+                text-align: left;
+            }
+        }
+        .skill-label {
+            color: lighten($text, 10%);
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        .skill-bar {
+            height: 15px;
+            width: 100%;
+            font-size: 0;
+            margin-bottom: 14px;
+            > span {
+                display: inline-block;
+                height: 15px;
+                width: 15px;
+                background: lighten($text, 30%);
+                + span {
+                    margin-left: 5px;
+                }
+                &.fill {
+                	background: darken($yellow, 5%);
+                }
+            }
+        }
+    }
+}

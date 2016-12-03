@@ -1,0 +1,17 @@
+<!-- Blog Posts -->
+<section class="module posts-module">
+    <div class="posts-wrap">
+        {% for post in site.posts %}
+            <div class="post">
+                <h2 class="post-title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h2>
+                <p class="post-excerpt">
+                    {{ post.excerpt }}
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+    <hr class="separator">
+</section>
+<!-- /Blog Posts -->

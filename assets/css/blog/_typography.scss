@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+
+@mixin font-stack-open {
+	font-family: 'Open Sans', sans-serif;
+}
+
+@mixin font-stack-lato {
+	font-family: 'Lato', sans-serif;
+}
+
+@mixin font-stack-lucida {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+::-moz-selection {
+    background: $blue;
+    color: #fff
+}
+
+::selection {
+    background: $blue;
+    color: #fff
+}
+
+html {
+    @include font-stack-open;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5
+}
+
+body {
+    overflow-x: hidden
+}
+
+a {
+    color: $yellow
+}
+
+a:focus,
+a:hover {
+    color: $white;
+}
+
+blockquote,
+blockquote cite {
+    position: relative
+}
+
+blockquote,
+table th,
+thead {
+    background: #f5f5f5
+}
+
+acronym {
+    border-bottom: 1px dotted #222
+}
+
+abbr {
+    cursor: help;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include font-stack-open;
+    margin: 0 0 10px;
+    padding: 0;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+    color: #333
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin: 0 0 1.3rem
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0 0 1.2rem
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.1rem
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.3rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+    margin: 0 0 .9rem;
+    text-transform: uppercase
+}
+
+h6 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin: 5px 0
+}
+
+blockquote,
+code,
+pre {
+    @include font-stack-lucida;
+    font-size: 16px
+}
+
+blockquote {
+    margin: 0 0 20px;
+    display: block;
+    padding: 20px 20px 20px 30px;
+    border-left: 5px solid #ED5565
+}
+
+blockquote cite:before {
+    content: "—";
+    padding-right: 5px
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px
+}
+
+table,
+td,
+th,
+tr {
+    border: 1px solid #bbb;
+    border-collapse: collapse;
+    padding: 10px
+}
+
+code a:active,
+code a:focus,
+code a:hover {
+    border-bottom: 0
+}
+
+pre code {
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0
+}

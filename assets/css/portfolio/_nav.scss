@@ -1,0 +1,70 @@
+#nav {
+    position: fixed;
+    z-index: 200;
+    top: 50%;
+    left: 30px;
+    @include transform(translateY(-50%));
+    > ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        > li {
+            display: block;
+            margin-bottom: 5px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            > a {
+                background: rgba(black, .6);
+                display: block;
+                height: 30px;
+                width: 30px;
+                text-align: center;
+                color: $white;
+                position: relative;
+                outline: none;
+                @include transition(all .3s linear);
+                > i {
+                    display: inline-block;
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+                > span {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    @include vcenter();
+                    background: $yellow;
+                    height: 30px;
+                    padding: 0 15px;
+                    line-height: 30px;
+                    left: 67px;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include transition(all .3s linear);
+                    &:before {
+                        content: "";
+                        @include vcenter();
+                        left: -7px;
+                        width: 0;
+                        height: 0;
+                        border-top: 7px solid transparent;
+                        border-bottom: 7px solid transparent;
+                        border-right: 7px solid $yellow;
+                    }
+                }
+                &:hover, &:active, &:focus, &.active {
+                	background: $yellow;
+                	> span {
+                		opacity: 1;
+                		visibility: visible;
+                		left: 37px;
+                	}
+                }
+            }
+        }
+    }
+
+    @include media(tablet) {
+    	display: none;
+    }
+}

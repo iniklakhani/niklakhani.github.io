@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+
+@mixin font-stack-open {
+	font-family: 'Open Sans', sans-serif;
+}
+
+@mixin font-stack-lato {
+	font-family: 'Lato', sans-serif;
+}
+
+@mixin font-stack-lucida {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+::-moz-selection {
+    background: $blue;
+    color: #fff
+}
+
+::selection {
+    background: $blue;
+    color: #fff
+}
+
+html {
+    @include font-stack-open;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5
+}
+
+body {
+    overflow-x: hidden
+}
+
+a {
+    color: $yellow
+}
+
+a:focus,
+a:hover {
+    color: $white;
+}

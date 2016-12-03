@@ -1,0 +1,56 @@
+---
+---
+@import "bits";
+@import "mixins";
+@import "blog/typography";
+
+.posts-module {
+	padding-bottom: 0;
+}
+.posts-wrap {
+	max-width: 768px;
+	margin: 0 auto 50px;
+	.post {
+		display: block;
+		border-bottom: 1px dotted #333;
+		padding: 20px 10px 20px 30px;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	.post-title {
+		padding: 0;
+		margin: 0;
+		@include font-stack-open();
+		font-size: 18px;
+		font-weight: 600;
+		text-shadow: 0;
+		margin-bottom: 5px;
+		@include media(mobile) {
+			font-size: 16px;
+		}
+		position: relative;
+		&:before {
+			content: ">_";
+			position: absolute;
+			left: -30px;
+			top: 0;
+			color: #424242;
+		}
+		a {
+			color: #424242;
+			&:hover, &:active, &:focus {
+				color: $yellow;
+			}
+		}
+	}
+	.post-excerpt {
+		padding: 0;
+		margin: 0;
+		font-size: 14px;
+		@include media(mobile) {
+			font-size: 12px;
+		}
+		color: #666;
+	}
+}

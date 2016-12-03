@@ -1,0 +1,163 @@
+---
+---
+@import "bits";
+@import "mixins";
+@import "blog/typography";
+@import "blog/comments";
+
+.post-module {
+	padding-bottom: 0;
+	padding-top: 50px;
+}
+
+.post-wrap {
+	max-width: 768px;
+	margin: 0 auto 50px;
+}
+
+.post-content {
+	padding: 0;
+	margin: 0;
+	color: #333;
+	font-size: 1rem;
+	@include media(mobile) {
+		font-size: 90%;
+	}
+
+	a {
+		color: #333;
+		text-decoration: underline;
+		&:hover, &:active, &:focus {
+			color: $blue;
+		}
+	}
+
+	ul, ol {
+		margin-bottom: 20px;
+		ul, ol {
+			margin-bottom: auto;
+		}
+	}
+
+	p {
+		margin-bottom: 20px;
+		line-height: 1.7;
+	}
+
+	p code,
+	li code {
+		@include font-stack-lucida;
+		font-size: 90%;
+		line-height: 1;
+		background: #eee;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;
+		padding: 0 3px
+	}
+
+	figure:not(.highlight) {
+		display: block;
+		text-align: center;
+		border: 1px solid #d8d8d8;
+		border-radius: 3px;
+		background: #fefefe;
+		padding: 15px 15px 0;
+		margin-bottom: 30px;
+		img {
+			margin: 0 auto;
+			width: auto;
+			height: auto;
+			display: block;
+		}
+		figcaption {
+			@include font-stack-open;
+			font-size: 14px;
+			line-height: 40px;
+			letter-spacing: 1px;
+			color: #444;
+		}
+	}
+}
+
+.preview {
+    border: 1px solid #e7e7e7;
+    margin-bottom: 20px;
+    padding: 15px;
+    & :last-child {
+    	margin-bottom: 0;
+    	padding-bottom: 0;
+    }
+}
+
+.preview p {
+    margin: 0;
+    padding: 0
+}
+
+.browser-support {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    .chrome,
+    .firefox,
+    .ie,
+    .no,
+    .opera,
+    .safari,
+    .yes {
+        display: block;
+        height: 32px;
+        width: 32px
+    }
+}
+
+.browser-support td {
+    border: 1px solid #e7e7e7;
+    text-align: center;
+    padding: 10px 0 10px 8%;
+
+    > .ie {
+        background: url(../images/support/IE.svg) no-repeat #fff
+    }
+
+   >  .firefox {
+        background: url(../images/support/firefox.svg) no-repeat #fff
+    }
+
+    > .opera {
+        background: url(../images/support/opera.svg) no-repeat #fff
+    }
+
+    > .chrome {
+        background: url(../images/support/chrome.svg) no-repeat #fff
+    }
+
+    > .safari {
+        background: url(../images/support/safari.svg) no-repeat #fff
+    }
+
+    > .yes {
+        background: url(../images/support/yeap.svg) no-repeat #fff
+    }
+
+    > .no {
+        background: url(../images/support/nope.svg) no-repeat #fff
+    }
+}
+
+.svg-container {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%; 
+	vertical-align: middle; 
+	overflow: hidden;
+	svg {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}

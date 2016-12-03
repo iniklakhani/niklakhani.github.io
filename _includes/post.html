@@ -1,0 +1,22 @@
+<!-- Blog Post -->
+<section class="module post-module">
+    <div class="post-wrap">
+        <div class="post-content">
+            {{ page.content }}
+        </div>
+    </div>
+    <hr class="separator">
+    <!-- Sharer -->
+    {% include post-share.html %}
+    <!-- Sharer -->
+    <!-- Comments -->
+    {% if page.comments %}
+    	{% include comments.html %}
+    {% else %}
+        <div class="comments disabled" id="comments">
+            <p>Comments have been disabled for this post, but you can always <a href="{{ site.url }}/#contact">contact</a> me.</p>
+        </div>
+    {% endif %}
+    <!-- /Comments -->
+</section>
+<!-- /Blog Posts -->

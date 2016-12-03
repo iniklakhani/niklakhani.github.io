@@ -1,0 +1,93 @@
+@mixin hcenter() {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+
+@mixin vcenter() {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+@mixin hvcenter() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+}
+
+@mixin transform($value) {
+    transform: $value;
+    -webkit-transform: $value;
+}
+
+@mixin transition($value) {
+    transition: $value;
+    -webkit-transition: $value;
+}
+
+@mixin column($value) {
+    -webkit-columns: $value;
+    -moz-columns: $value;
+    columns: $value;
+}
+
+@mixin column-gap($value) {
+    -webkit-column-gap: $value;
+    -moz-column-gap: $value;
+    column-gap: $value;
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin media($point) {
+    $x-small: "(max-width: 450px)";
+    $small: "(max-width: 600px)";
+    $large: "(max-width: 1024px)";
+    $x-large: "(max-width: 1600px)";
+    @if $point==desktop {
+        @media #{$x-large} {
+            @content;
+        }
+    }
+    @else if $point==tablet {
+        @media #{$large} {
+            @content;
+        }
+    }
+    @else if $point==mobile {
+        @media #{$small} {
+            @content;
+        }
+    }
+    @else if $point==x-small {
+        @media #{$x-small} {
+            @content;
+        }
+    }
+}

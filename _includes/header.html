@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>{% if page.title %}{{ page.title }}{% else if site.username %}{{ site.username }}{% else %}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="viewport" content="width=device-width">
+
+	<!-- SEO -->
+	{% include seo.html %}
+	<!-- /SEO -->
+
+	<meta rel="author" href="{{ site.google-author }}">
+	<meta rel="publisher" href="{{ site.google-publisher }}">
+
+	<!-- Custom Favicons -->
+	{% include favicon.html %}
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="{{ "/assets/css/folio.css" | prepend: site.baseurl }}">
+
+	<!-- Custom Scripts -->
+	<script src="{{ site.baseurl }}/assets/js/jquery.js"></script>
+</head>
+<body>
+
+	<div class="page-wrap">
+		<!-- Site Content -->
+		

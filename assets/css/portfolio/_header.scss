@@ -1,0 +1,212 @@
+.header {
+	background: url(../images/road.jpg);
+	min-height: 100vh;
+	@include media(mobile) {
+		min-height: 100%;
+		padding: 350px 0 150px;
+	}
+	width: 100%;
+	position: relative;
+	z-index: 100;
+
+	.overlay {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(51, 51, 51, .4);
+	}
+}
+
+.header-nav {
+	margin: 0 auto;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+
+	.nav-left,
+	.nav-right {
+		height: 50px;
+		position: relative;
+		z-index: 1;
+		line-height: 50px;
+
+		@include media(tablet) {
+			width: 100%;
+		}
+	}
+
+	.nav-left {
+		background: -moz-linear-gradient(left,  rgba(29,29,29,0.5) 0%, rgba(60,60,60,1) 100%);
+		background: -webkit-linear-gradient(left,  rgba(29,29,29,0.5) 0%,rgba(60,60,60,1) 100%);
+		background: linear-gradient(to right,  rgba(29,29,29,0.5) 0%,rgba(60,60,60,1) 100%);
+		text-align: right;
+		padding-right: 50px;
+		@include media(tablet) {
+			margin-bottom: 2px;
+		}
+	}
+
+	.nav-right {
+		background: -moz-linear-gradient(left,  rgba(60,60,60,1) 0%, rgba(29,29,29,0.5) 100%);
+		background: -webkit-linear-gradient(left,  rgba(60,60,60,1) 0%,rgba(29,29,29,0.5) 100%);
+		background: linear-gradient(to right,  rgba(60,60,60,1) 0%,rgba(29,29,29,0.5) 100%);
+		padding-left: 50px;
+		@include media(tablet) {
+			margin-top: 2px;
+		}
+	}
+
+	.nav-links {
+		a {
+			color: $white;
+			@include font-stack-lucida;
+			font-size: 13px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			@include media(mobile) {
+				display: none;
+			}
+		}
+	}
+}
+
+.logo {
+	@include hcenter();
+	z-index: 10;
+	height: 60px;
+	width: 60px;
+	margin-top: 20px;
+	background: url(../images/road.jpg);
+	border-radius: 50%;
+
+	a {
+		border-radius: 50%;
+		display: block;
+	}
+
+	.logo-inner,
+	.logo-inner > span {
+		display: block;
+		position: relative;
+		border-radius: 50%;
+	}
+
+	.logo-inner {
+		height: 52px;
+		width: 52px;
+		background: darken($yellow, 15%);
+		left: 4px;
+		top: 4px;
+
+		&:hover > span {
+			@include transform(rotate(360deg));
+			transition: all 600ms linear;
+		}
+
+		> span {
+			background: $yellow;
+			height: 44px;
+			width: 44px;
+			top: 4px;
+			left: 4px;
+			font-size: 36px;
+			font-weight: 700;
+			color: darken($yellow, 15%);
+			text-align: center;
+			line-height: 44px;
+			text-transform: uppercase;
+			&:after {
+				@include vcenter();
+				content: "";
+				width: 100%;
+				height: 4px;
+				left: 0;
+				background: darken($yellow, 15%);
+			}
+		}
+	}
+}
+
+.header-brand {
+	@include hvcenter();
+	text-align: center;
+	width: 100%;
+	max-width: 600px;
+	padding: 0 $gutter/3;
+
+	.heading-big {
+		> h2 {
+			@include font-stack-lucida;
+			color: $yellow;
+			text-transform: uppercase;
+			padding: 0;
+			margin: 0;
+			white-space: nowrap;
+		}
+
+		> h1 {
+			font-size: 60;
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: 8px;
+			@include media(mobile) {
+				letter-spacing: 4px;
+			}
+			color: $white;
+			border: 4px solid $white;
+			margin: 0;
+			padding: 0;
+		}
+
+		> span {
+			font-size: 14px;
+			letter-spacing: 1px;
+			color: $white;
+			text-transform: uppercase;
+			position: relative;
+			display: block;
+			width: 100%;
+			margin-top: 5px;
+		}
+	}
+}
+
+.loading {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: #333;
+	background-image: url(../images/road.jpg);
+
+	.overlay {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(51, 51, 51, .7);
+	}
+
+	.logo {
+		@include hvcenter();
+		.logo-inner:hover > span {
+			@include transform(none);
+		}
+		.logo-inner {
+			span.animate {
+				@include animation('loading 2s linear infinite');
+			}
+		}
+	}
+}
+
+@include keyframes(loading) {
+	0%   { @include transform(rotate(0deg)); }
+	100% { @include transform(rotate(360deg)); }
+}

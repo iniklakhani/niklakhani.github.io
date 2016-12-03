@@ -1,0 +1,82 @@
+---
+---
+@import "bits";
+@import "mixins";
+@import "blog/typography";
+@import "blog/comments";
+
+.page-module {
+	padding-bottom: 0;
+	padding-top: 50px;
+}
+
+.page-module-wrap {
+	max-width: 768px;
+	margin: 0 auto 50px;
+}
+
+.page-content {
+	padding: 0;
+	margin: 0;
+	color: #333;
+	font-size: 1rem;
+	@include media(mobile) {
+		font-size: 90%;
+	}
+
+	a {
+		color: #333;
+		text-decoration: underline;
+		&:hover, &:active, &:focus {
+			color: $blue;
+		}
+	}
+
+	ul, ol {
+		margin-bottom: 20px;
+		ul, ol {
+			margin-bottom: auto;
+		}
+	}
+
+	p {
+		margin-bottom: 20px;
+		line-height: 1.7;
+	}
+
+	p code,
+	li code {
+		@include font-stack-lucida;
+		font-size: 90%;
+		line-height: 1;
+		background: #eee;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;
+		padding: 0 3px
+	}
+
+	figure:not(.highlight) {
+		display: block;
+		text-align: center;
+		border: 1px solid #d8d8d8;
+		border-radius: 3px;
+		background: #fefefe;
+		padding: 15px 15px 0;
+		margin-bottom: 30px;
+		img {
+			margin: 0 auto;
+			width: auto;
+			height: auto;
+			display: block;
+		}
+		figcaption {
+			@include font-stack-open;
+			font-size: 14px;
+			line-height: 40px;
+			letter-spacing: 1px;
+			color: #444;
+		}
+	}
+}
