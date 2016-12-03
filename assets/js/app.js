@@ -21,7 +21,9 @@ $(document).ready(function() {
 
     // Change active class on scroll
     $(document).on("scroll", onScroll);
+});
 
+$(window).load(function(){
     setInterval(function(){
         adjustPortfolio();
         $('.site-loader').fadeOut('slow');
