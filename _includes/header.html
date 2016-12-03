@@ -1,14 +1,9 @@
 <script>
-	function preload(arrayOfImages) {
-	    $(arrayOfImages).each(function(){
-	        $('<img/>')[0].src = this;
-	        // Alternatively you could use:
-	        // (new Image()).src = this;
-	    });
+	function preload() {
+	    var img = new Image();
+	    img.src = 'https://niklakhani.in/assets/images/road.jpg';
 	}
-	preload([
-	    'https://niklakhani.in/assets/images/road.jpg'
-	]);
+	preload();
 </script>
 <!DOCTYPE html>
 <html lang="en">
