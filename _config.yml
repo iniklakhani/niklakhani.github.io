@@ -5,7 +5,7 @@ email: mr.niklakhani@gmail.com
 author: "Nikul Lakhani"
 username: "niklakhani"
 baseurl: ""
-url: "https://niklakhani.in/"
+url: "https://niklakhani.in"
 port: 8080
 
 # Build settings
