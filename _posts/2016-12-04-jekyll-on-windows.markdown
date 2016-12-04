@@ -17,7 +17,7 @@ comments: true
 <h2>What is Jekyll?</h2>
 
 <p>
-	Jekyll is a static site generator. It is used to transform your raw text files into complete, ready static website. Jekyll is very popular blog-aware, static site generator. GitHub is a good choice for hosting your project's page, blog or even website.
+	<a href="//jekyllrb.com/">Jekyll</a> is a static site generator. It is used to transform your raw text files into complete, ready-to-launch static website. Jekyll is very popular blog-aware, static site generator. <a href="//github.com/">GitHub</a> is a good choice for hosting your project's page, blog or even website.
 </p>
 
 <figure>
@@ -30,13 +30,13 @@ comments: true
 <h2>Why Jekyll?</h2>
 
 <p>
-	I was tired of having my blog posts end up in a database off on paid server. So there are some reasons why i am using jekyll for my site and blog.
+	I was tired of having my blog posts end up in a database off on a paid server. So there are some reasons why i've started using jekyll for my <a href="/">site</a> and <a href="/blog/">blog</a>.
 </p>
 
 <ol>
 	<li>It's free.</li>
 	<li>Hosting is also free on GitHub.</li>
-	<li>Version Control.</li>
+	<li>Version Control on GitHub.</li>
 	<li>Static pages, so obviously faster.</li>
 </ol>
 
@@ -47,7 +47,7 @@ comments: true
 </p>
 
 <p>
-	So In this article, i tried to discover all those tweaks to run Jekyll on windows platform. For this installation you'll need some tools, first download those tools based on your system(either x64 or x86) and follow the process to install.
+	So In this article, i've tried to discover all those tweaks to run Jekyll on windows platform. For this installation you'll need some tools, first download those tools based on your system(either x64 or x86) and follow the installation procedure.
 </p>
 
 <ul>
@@ -73,7 +73,7 @@ comments: true
 <h4>Ruby DevKit Installation</h4>
 
 <p>
-	In order to make Jekyll works properly, you may need to install Ruby DevKit. It's a self exctracting archive, so extract it in your system. for example i've extracted it in <code>C:\RubyDevKit</code>.
+	In order to make Jekyll works properly, you might need to install Ruby DevKit. It is a self exctracting archive, so extract it in your system. for example i've extracted it in <code>C:\RubyDevKit</code>.
 </p>
 
 <p>
@@ -112,7 +112,7 @@ comments: true
 <h2>Installing Jekyll</h2>
 
 <p>
-	Jekyll is the software package of ruby called Gem. To install Jekyll Gem and all its dependencies, enter the following command in your command line tool.
+	Jekyll is the software package of Ruby called Gem. To install Jekyll Gem and all its dependencies, enter the following command in your command line tool.
 </p>
 
 <figure class="highlight">
@@ -125,7 +125,7 @@ comments: true
 	You'll see gems are automatically downloaded and installed. This might take a while depends on your internet connection and number of dependencies.
 </p>
 
-<h2>New Jekyll Website</h2>
+<h2>Create Jekyll Website</h2>
 
 <p>
 	Creating new site locally using Jekyll is pretty easy. Just open up your windows command line tool and hit the following command:
@@ -144,7 +144,7 @@ comments: true
 <h2>Launching Your Site</h2>
 
 <p>
-	Finally you are at the end, you are going to launch our website locally by hitting the next and last command.
+	Finally you are at the end, you are going to launch your website locally by hitting the next and last command.
 </p>
 
 <figure class="highlight">
@@ -172,13 +172,13 @@ comments: true
 </figure>
 
 <p>
-	When you perform the last command, then Jekyll will generate another folder with name <code>_site</code> in which your actual static site data that you see in browser.
+	When you perform the last command, Jekyll will generate another folder with name <code>_site</code> in which contains your actual static site data that you see in your browser.
 </p>
 
 <h2>Wrap Up</h2>
 
 <p>
-	Finally you are done! You've now installed everything that need to run Jekyll on Windows. You can see your website locally, but you can deploy it on live web server so everybody can see it. GitHub is free and great choice for hosting your Jekyll based websites. It also provides a version control feature for your repositories.
+	Finally you are done! You've now installed everything that need to run Jekyll on Windows. You can see your website locally, but you can deploy it on live web server so everybody can see it. GitHub is a free and great choice for hosting your Jekyll based websites. It also provides a version control feature for your repositories.
 </p>
 
 <h2>More Resource</h2>
