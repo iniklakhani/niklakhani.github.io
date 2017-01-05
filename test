@@ -46,6 +46,44 @@ function animateNextShow(slider_no) {
         var sliderposition = slider_no * imagewidth;
         $('.slider').animate({'left': -sliderposition}, 500);
     }
+    
+    .visible-area {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.slider {
+    margin: 0 auto;
+    position: absolute;
+/*    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    top: 0;
+    left: 0;
+    max-height: 300px;
+}
+
+.slider img {
+    float: left;
+    display: block;
+}
+
+<div class="visible-area">
+                    <div class="slider">
+                        <div><img src="images/big-buck-bunny-600-300.jpg" alt="1" /></div>
+                        <div><img src="images/dandelion-600-300.jpg" alt="2" /></div>
+                        <div class="start"><img src="images/desert-sunrise-600-300.jpg" alt="3" /></div>
+                        <div><img src="images/elephants-dream-600-300.jpg" alt="4" /></div>
+                        <div><img src="images/sintel-600-300.jpg" alt="5" /></div>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+                <button class="next">Next</button>
+                <button class="previous">Previous</button>
     return;
 }
 
