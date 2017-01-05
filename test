@@ -1,0 +1,58 @@
+$('.slider img').width($('.visible-area').width());
+// Set image width
+
+var imagewidth = $('.visible-area').width();
+// Width of 1 image (should be equal to the width of "visible-area" box)
+
+var totalimages = $('.slider img').length;
+// Total Number of images inside "slider" div.
+
+var sliderwidth = imagewidth * totalimages;
+// Total width of "slider" div.
+
+$('.slider').css({'width': sliderwidth});
+// Here we are assigning the width to the slider div (using the css method in jquery)
+
+var slideShow = 0;
+
+(function(){
+    
+    $('.next').on('click', function(){
+        if(slideShow == totalimages - 1) {
+            // Move to first slide
+            slideShow = 0;
+        } else {
+            slideShow++;
+        }
+        animateNextShow(slideShow);
+        console.log(slideShow);
+    });
+    
+    $('.previous').on('click', function(){
+        if(slideShow == 0) {
+            // Move to last slide
+            slideShow = totalimages - 1;
+        } else {
+            slideShow--;
+        }
+        animatePreviousShow(slideShow);
+        console.log(slideShow);
+    });
+    
+})();
+
+function animateNextShow(slider_no) {
+    if (totalimages >= 1) {
+        var sliderposition = slider_no * imagewidth;
+        $('.slider').animate({'left': -sliderposition}, 500);
+    }
+    return;
+}
+
+function animatePreviousShow(slider_no) {
+    if (totalimages >= 1) {
+        var sliderposition = slider_no * imagewidth;
+        $('.slider').animate({'left': -sliderposition}, 500);
+    }
+    return;
+}
